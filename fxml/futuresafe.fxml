@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.FutureSafeController">
+   <children>
+      <TextField fx:id="text" editable="false" layoutX="82.0" layoutY="78.0" prefHeight="56.0" prefWidth="436.0" style="-fx-background-color: #DCDCDC;">
+         <font>
+            <Font name="Andale Mono" size="33.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="lock" fitHeight="195.0" fitWidth="194.0" layoutX="403.0" layoutY="162.0" onMouseClicked="#clickLock" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/istockphoto-1133083910-612x612.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="zero" layoutX="37.0" layoutY="192.0" mnemonicParsing="false" onAction="#onZeroClicked" prefHeight="29.0" prefWidth="25.0" style="-fx-background-color: grey;" text="0" textFill="WHITE">
+         <font>
+            <Font name="Andale Mono" size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="one" layoutX="100.0" layoutY="193.0" mnemonicParsing="false" onAction="#onOneClicked" prefHeight="29.0" prefWidth="25.0" style="-fx-background-color: grey;" text="1" textFill="WHITE">
+         <font>
+            <Font name="Andale Mono" size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="two" layoutX="166.0" layoutY="192.0" mnemonicParsing="false" onAction="#onTwoClicked" prefHeight="29.0" prefWidth="25.0" style="-fx-background-color: grey;" text="2" textFill="WHITE">
+         <font>
+            <Font name="Andale Mono" size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="three" layoutX="231.0" layoutY="192.0" mnemonicParsing="false" onAction="#onThreeClicked" prefHeight="29.0" prefWidth="25.0" style="-fx-background-color: grey;" text="3" textFill="WHITE">
+         <font>
+            <Font name="Andale Mono" size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="four" layoutX="294.0" layoutY="192.0" mnemonicParsing="false" onAction="#onFourClicked" prefHeight="29.0" prefWidth="25.0" style="-fx-background-color: grey;" text="4" textFill="WHITE">
+         <font>
+            <Font name="Andale Mono" size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="five" layoutX="37.0" layoutY="260.0" mnemonicParsing="false" onAction="#onFiveClicked" prefHeight="29.0" prefWidth="25.0" style="-fx-background-color: grey;" text="5" textFill="WHITE">
+         <font>
+            <Font name="Andale Mono" size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="six" layoutX="100.0" layoutY="260.0" mnemonicParsing="false" onAction="#onSixClicked" prefHeight="29.0" prefWidth="25.0" style="-fx-background-color: grey;" text="6" textFill="WHITE">
+         <font>
+            <Font name="Andale Mono" size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="seven" layoutX="166.0" layoutY="260.0" mnemonicParsing="false" onAction="#onSevenClicked" prefHeight="29.0" prefWidth="25.0" style="-fx-background-color: grey;" text="7" textFill="WHITE">
+         <font>
+            <Font name="Andale Mono" size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="eight" layoutX="231.0" layoutY="260.0" mnemonicParsing="false" onAction="#onEightClicked" prefHeight="29.0" prefWidth="25.0" style="-fx-background-color: grey;" text="8" textFill="WHITE">
+         <font>
+            <Font name="Andale Mono" size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="nine" layoutX="294.0" layoutY="260.0" mnemonicParsing="false" onAction="#onNineClicked" prefHeight="29.0" prefWidth="25.0" style="-fx-background-color: grey;" text="9" textFill="WHITE">
+         <font>
+            <Font name="Andale Mono" size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="delete" layoutX="354.0" layoutY="259.0" mnemonicParsing="false" onAction="#onDeleteClicked" prefHeight="43.0" prefWidth="64.0" style="-fx-background-color: grey;" text="&lt;" textFill="WHITE">
+         <font>
+            <Font name="Andale Mono" size="23.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelHint" layoutX="440.0" layoutY="33.0" prefHeight="28.0" prefWidth="157.0" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Avenir Next Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="opensafe" fitHeight="400.0" fitWidth="715.0" layoutX="-39.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/opensafe.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="key" fitHeight="217.0" fitWidth="314.0" layoutX="122.0" layoutY="43.0" onMouseClicked="#clickKey" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/clockhand.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imagefixclock" fitHeight="427.0" fitWidth="612.0" layoutX="-1.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/fixscene.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="fixclock" layoutX="352.0" layoutY="179.0" mnemonicParsing="false" onMouseClicked="#clickFixClock" prefHeight="69.0" prefWidth="178.0" style="-fx-background-color: grey; -fx-background-radius: 40;" text="Fix clock" visible="false">
+         <font>
+            <Font name="Andale Mono" size="25.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="back" fitHeight="43.0" fitWidth="46.0" onMouseClicked="#clickReturn" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/back.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="futureSafeTimer" layoutX="282.0" layoutY="16.0" textFill="WHITE" />
+      <ImageView fx:id="gamemaster" fitHeight="99.0" fitWidth="116.0" layoutX="-1.0" layoutY="311.0" onMouseClicked="#clickGameMaster" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/gamemaster.png" />
+         </image>
+      </ImageView>
+      <ProgressBar fx:id="progressBarSafe" layoutX="386.0" layoutY="6.0" prefWidth="200.0" progress="0.0" />
+      <Label fx:id="futureSafeTimer" layoutX="389.0" layoutY="8.0" prefHeight="17.0" prefWidth="52.0" textFill="WHITE" />
+   </children>
+</AnchorPane>

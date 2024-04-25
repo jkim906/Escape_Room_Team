@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onKeyPressed" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.ChatController">
+  <children>
+      <ImageView fitHeight="549.0" fitWidth="762.0" layoutX="-11.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/chatBackground.jpeg" />
+         </image>
+      </ImageView>
+    <TextField fx:id="inputField" layoutX="76.0" layoutY="359.0" prefHeight="29.0" prefWidth="432.0" promptText="Type here..." style="-fx-background-color: white; -fx-background-radius: 40;" />
+      <ImageView fx:id="back" fitHeight="46.0" fitWidth="42.0" layoutX="5.0" layoutY="359.0" onMouseClicked="#onGoBack" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/back.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="chatTimer" alignment="CENTER" layoutX="38.0" layoutY="6.0" prefHeight="29.0" prefWidth="135.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label fx:id="hint" layoutX="350.0" layoutY="4.0" prefHeight="33.0" prefWidth="196.0" textFill="WHITE" visible="false">
+         <font>
+            <Font name="BM JUA OTF" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="send" fitHeight="45.0" fitWidth="39.0" layoutX="509.0" layoutY="351.0" onMouseClicked="#onSendMessage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/chatsend.png" />
+         </image></ImageView>
+      <ScrollPane fx:id="scrollpane" hvalue="1.0" layoutX="38.0" layoutY="33.0" pannable="true" prefHeight="312.0" prefWidth="541.0" style="-fx-background-color: white;" vvalue="1.0">
+         <content>
+            <VBox fx:id="vbox" prefHeight="292.0" prefWidth="508.0" />
+         </content>
+      </ScrollPane>
+  </children>
+</AnchorPane>

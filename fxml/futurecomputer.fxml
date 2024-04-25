@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onKeyPressed" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.FutureComputerController">
+   <children>
+      <ImageView fx:id="send" fitHeight="616.0" fitWidth="923.0" layoutX="-126.0" layoutY="-121.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/future-computer.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="inputText" layoutX="91.0" layoutY="331.0" prefHeight="27.0" prefWidth="430.0" promptText="Type here..." style="-fx-background-color: white; -fx-background-radius: 40;" />
+      <ImageView fx:id="send" fitHeight="50.0" fitWidth="42.0" layoutX="523.0" layoutY="319.0" onMouseClicked="#clickSend" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/chatsend.png" />
+         </image>
+      </ImageView>
+      <ProgressBar fx:id="progressBarComp" layoutX="386.0" layoutY="376.0" prefWidth="200.0" progress="0.0" />
+      <Label fx:id="futureComputerTimer" layoutX="392.0" layoutY="378.0" prefHeight="17.0" prefWidth="40.0" textFill="WHITE" />
+      <Label fx:id="hintCount" layoutX="6.0" layoutY="-22.0" prefHeight="129.0" prefWidth="144.0" textFill="WHITE" visible="false" wrapText="true">
+         <font>
+            <Font name="Hiragino Sans W5" size="13.0" />
+         </font></Label>
+      <ImageView fx:id="back" fitHeight="45.0" fitWidth="51.0" layoutY="356.0" onMouseClicked="#clickReturn" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/back.png" />
+         </image>
+      </ImageView>
+      <ScrollPane fx:id="scrollpane" hvalue="1.0" layoutX="88.0" layoutY="26.0" pannable="true" prefHeight="270.0" prefWidth="481.0" style="-fx-background-color: white;" vvalue="1.0">
+         <content>
+            <VBox fx:id="vbox" prefHeight="250.0" prefWidth="450.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

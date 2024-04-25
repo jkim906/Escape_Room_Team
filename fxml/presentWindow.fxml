@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleKeyPressed" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.PresentWindowController">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="1173.0" fitWidth="1563.0" layoutX="-718.0" layoutY="-366.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/windowFind.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="key" fitHeight="114.0" fitWidth="114.0" layoutX="600.0" layoutY="248.0" onMouseClicked="#onKeyPressedTwo" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/moneybag.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="key2" fitHeight="118.0" fitWidth="121.0" layoutX="108.0" layoutY="397.0" onMouseClicked="#clickKey2" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/moneybag.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" layoutX="-3.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="604.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="165.0" layoutX="-6.0" layoutY="311.0" stroke="BLACK" strokeType="INSIDE" width="604.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="445.0" layoutX="406.0" layoutY="-14.0" stroke="BLACK" strokeType="INSIDE" width="207.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="547.0" layoutX="-8.0" layoutY="-113.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <ImageView fx:id="circle" fitHeight="237.0" fitWidth="337.0" layoutX="173.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/circle.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="scope" fitHeight="216.0" fitWidth="209.0" layoutX="188.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/scope.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="leftButton" fitHeight="108.0" fitWidth="90.0" layoutX="96.0" layoutY="171.0" onMouseClicked="#leftClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/arrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="gamemaster" fitHeight="101.0" fitWidth="125.0" layoutX="-6.0" layoutY="310.0" onMouseClicked="#clickGameMaster" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/gamemaster.png" />
+         </image>
+      </ImageView>
+      <ProgressBar fx:id="progressBarWindow" layoutX="397.0" layoutY="4.0" prefWidth="200.0" progress="0.0" />
+      <Label fx:id="labelHint" layoutX="431.0" layoutY="44.0" prefHeight="28.0" prefWidth="157.0" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Avenir Next Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="presentWindowTimer" layoutX="400.0" layoutY="4.0" prefHeight="17.0" prefWidth="72.0" />
+      <ImageView fx:id="downButton" fitHeight="108.0" fitWidth="90.0" layoutX="247.0" layoutY="323.0" onMouseClicked="#downClicked" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+         <image>
+            <Image url="@../images/arrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="rightButton" fitHeight="108.0" fitWidth="90.0" layoutX="397.0" layoutY="171.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#rightClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/arrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="upButton" fitHeight="108.0" fitWidth="90.0" layoutX="248.0" layoutY="24.0" onMouseClicked="#upClicked" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@../images/arrow.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="upKey" layoutX="281.0" layoutY="55.0" text="W">
+         <font>
+            <Font name="Times New Roman Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="leftKey" layoutX="154.0" layoutY="193.0" text="A">
+         <font>
+            <Font name="Times New Roman Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="downKey" layoutX="284.0" layoutY="324.0" text="S">
+         <font>
+            <Font name="Times New Roman Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="rightKey" layoutX="412.0" layoutY="194.0" text="D">
+         <font>
+            <Font name="Times New Roman Bold" size="23.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="returnButton" fitHeight="82.0" fitWidth="72.0" layoutX="6.0" layoutY="6.0" onMousePressed="#returnButtonPressed" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/back.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
