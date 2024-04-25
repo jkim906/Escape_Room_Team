@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.FutureController">
+   <children>
+      <ImageView fitHeight="546.0" fitWidth="859.0" layoutX="-232.0" layoutY="-48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/future-room.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inventory" fitHeight="179.0" fitWidth="78.0" layoutX="517.0" layoutY="340.0" onMouseClicked="#inventoryPressed" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/inventory.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="objectivesFuture" alignment="TOP_LEFT" layoutX="14.0" layoutY="23.0" opacity="0.5" prefHeight="227.0" prefWidth="280.0" style="-fx-background-color: black; -fx-background-radius: 10;" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <ImageView fitHeight="230.0" fitWidth="231.0" layoutX="433.0" layoutY="-49.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/futureclock.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="computer" arcHeight="5.0" arcWidth="5.0" fill="#0f88f2" height="80.0" layoutX="437.0" layoutY="134.0" onMouseClicked="#clickComputer" onMouseEntered="#hoverComputer" onMouseExited="#exitComputer" opacity="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="124.0" />
+      <ImageView fx:id="safe" fitHeight="59.0" fitWidth="78.0" layoutX="260.0" layoutY="186.0" onMouseClicked="#clickSafe" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/future-safe.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="phone" fitHeight="52.0" fitWidth="75.0" layoutX="356.0" layoutY="255.0" onMouseClicked="#clickPhone" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/future-phone.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="present" fitHeight="25.0" fitWidth="41.0" layoutX="502.0" layoutY="62.0" onMouseClicked="#clickPresent" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/arrow1.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelHint" layoutX="247.0" prefHeight="28.0" prefWidth="157.0" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Avenir Next Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="checklist" fitHeight="58.0" fitWidth="75.0" layoutX="444.0" layoutY="335.0" onMouseClicked="#onChecklistClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/checklist_1839294.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="phoneBig" fitHeight="490.0" fitWidth="720.0" layoutX="-116.0" layoutY="-58.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/futurephonecloseup.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="codeText" layoutX="287.0" layoutY="98.0" prefHeight="132.0" prefWidth="268.0" text="0 calls" visible="false" wrapText="true">
+         <font>
+            <Font name="Apple LiGothic Medium" size="62.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonPhoneExit" layoutX="548.0" layoutY="14.0" mnemonicParsing="false" onAction="#onExit" prefHeight="29.0" prefWidth="32.0" style="-fx-background-color: white; -fx-background-radius: 15;" text="X" visible="false">
+         <font>
+            <Font name="Apple LiGothic Medium" size="21.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="gamemaster" fitHeight="92.0" fitWidth="105.0" layoutY="315.0" onMouseClicked="#clickGameMaster" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/gamemaster.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="mute" layoutY="292.0" mnemonicParsing="false" onMouseClicked="#mute" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: grey; -fx-background-radius: 30;" text="Mute" textFill="WHITE" />
+      <TextField fx:id="gamemasterText" editable="false" layoutX="96.0" layoutY="371.0" prefHeight="28.0" prefWidth="466.0" visible="false" />
+      <ProgressBar fx:id="progressBarFuture" layoutX="14.0" layoutY="4.0" prefWidth="200.0" progress="0.0" />
+      <Label fx:id="futureTimer" layoutX="18.0" layoutY="6.0" prefHeight="17.0" prefWidth="53.0" />
+      <Rectangle fx:id="inventoryTab" arcHeight="5.0" arcWidth="5.0" fill="#c6d4e1" height="414.0" layoutX="287.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="313.0" />
+      <Rectangle fx:id="sidebar" arcHeight="5.0" arcWidth="5.0" fill="#c6d4e1" height="414.0" layoutX="-5.0" layoutY="-6.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" visible="false" width="292.0" />
+      <Label fx:id="inventoryLabel" layoutX="318.0" layoutY="12.0" prefHeight="38.0" prefWidth="265.0" text="INVENTORY" visible="false">
+         <font>
+            <Font name="Times New Roman Bold" size="39.0" />
+         </font>
+      </Label>
+      <Line fx:id="line" endX="163.0" layoutX="437.0" layoutY="60.0" startX="-150.0" visible="false" />
+      <Label fx:id="label1" layoutX="305.0" layoutY="67.0" prefHeight="288.0" prefWidth="278.0" visible="false">
+         <font>
+            <Font name="Times New Roman" size="35.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="returnButtonPresent" fitHeight="69.0" fitWidth="58.0" layoutX="524.0" layoutY="335.0" onMouseClicked="#inventoryPressed" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/back.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

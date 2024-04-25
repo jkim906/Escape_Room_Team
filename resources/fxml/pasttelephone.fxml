@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.PastTelephoneController">
+   <children>
+      <Button fx:id="one" layoutX="190.0" layoutY="105.0" mnemonicParsing="false" onAction="#onOneClicked" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: white;" text="1">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Button fx:id="four" layoutX="191.0" layoutY="180.0" mnemonicParsing="false" onAction="#onFourClicked" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: white;" text="4">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Button fx:id="seven" layoutX="192.0" layoutY="249.0" mnemonicParsing="false" onAction="#onSevenClicked" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: white;" text="7">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Button fx:id="eight" layoutX="283.0" layoutY="249.0" mnemonicParsing="false" onAction="#onEightClicked" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: white;" text="8">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Button fx:id="five" layoutX="282.0" layoutY="180.0" mnemonicParsing="false" onAction="#onFiveClicked" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: white;" text="5">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Button fx:id="two" layoutX="282.0" layoutY="106.0" mnemonicParsing="false" onAction="#onTwoClicked" prefHeight="39.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: white;" text="2">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Button fx:id="nine" layoutX="360.0" layoutY="249.0" mnemonicParsing="false" onAction="#onNineClicked" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: white;" text="9">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Button fx:id="six" layoutX="360.0" layoutY="180.0" mnemonicParsing="false" onAction="#onSixClicked" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: white;" text="6">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Button fx:id="three" layoutX="360.0" layoutY="105.0" mnemonicParsing="false" onAction="#onThreeClicked" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: white;" text="3">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Button fx:id="zero" layoutX="283.0" layoutY="314.0" mnemonicParsing="false" onAction="#onZeroClicked" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: white;" text="0">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Button fx:id="clear" layoutX="193.0" layoutY="314.0" mnemonicParsing="false" onAction="#onClearClicked" prefHeight="40.0" prefWidth="39.0" style="-fx-background-radius: 10; -fx-background-color: white;" text="&lt;">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Button fx:id="dial" layoutX="361.0" layoutY="317.0" mnemonicParsing="false" onAction="#onDialClicked" prefHeight="33.0" prefWidth="60.0" style="-fx-background-radius: 10; -fx-background-color: white;" text="Dial">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Button fx:id="handset" layoutX="229.0" layoutY="19.0" mnemonicParsing="false" onAction="#onPickUpHandSet" prefHeight="32.0" prefWidth="141.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Pick up Handset">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Label fx:id="labelHint" layoutX="431.0" layoutY="40.0" prefHeight="28.0" prefWidth="157.0" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Avenir Next Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="exit" fitHeight="41.0" fitWidth="59.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#onExitClicked" onMouseEntered="#onExitHover" onMouseExited="#onExitExited" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/back.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="gamemaster" fitHeight="105.0" fitWidth="109.0" layoutX="1.0" layoutY="305.0" onMouseClicked="#onClickGameMaster" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/gamemaster.png" />
+            </image>
+             </ImageView>
+      <Button fx:id="mute" layoutX="10.0" layoutY="285.0" mnemonicParsing="false" onMouseClicked="#mute" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: grey; -fx-background-radius: 30;" text="Mute" textFill="WHITE" />
+      <TextField fx:id="gamemasterText" editable="false" layoutX="125.0" layoutY="373.0" prefHeight="26.0" prefWidth="399.0" visible="false" />
+      <ProgressBar fx:id="progressBarPhone" layoutX="387.0" layoutY="4.0" prefWidth="200.0" progress="1.0" />
+      <Label fx:id="infoLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="63.0" layoutY="50.0" prefHeight="62.0" prefWidth="473.0" text="Pick up the handset to dial">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="pastTelephoneTimer" layoutX="393.0" layoutY="6.0" prefHeight="17.0" prefWidth="38.0" />
+      <Label fx:id="pastTelephoneDisplay" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" layoutX="20.0" layoutY="125.0" prefHeight="48.0" prefWidth="149.0" style="-fx-background-color: grey; -fx-background-radius: 10;" textAlignment="CENTER" textFill="#006b14" textOverrun="CLIP">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+
+   </children>
+</AnchorPane>
